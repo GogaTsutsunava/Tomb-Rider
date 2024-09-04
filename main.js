@@ -1,12 +1,24 @@
-// Select all menu items
-const menuItems = document.querySelectorAll('.menu-item');
+const dots = document.querySelectorAll('.dot');
+const video = document.getElementById('background-video');
+const image = document.getElementById('background-image');
 
-// Function to remove 'active' class from all items and add to the clicked item
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Remove 'active' from all items
-        menuItems.forEach(i => i.classList.remove('active'));
-        // Add 'active' to the clicked item
-        item.classList.add('active');
+// Set initial video source
+video.src = `./Images/Shadow Of The Tomb Raider - Official Trailer.mp4`;
+
+dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+        const type = this.getAttribute('data-type');
+        const src = this.getAttribute('data-src');
+        
+        if (type === 'video') {
+            video.src = `./Images/${src}`;
+            video.style.display = 'block';
+            image.style.display = 'none';
+            video.play();
+        } else if (type === 'image') {
+            image.src = `./Images/${src}`;
+            image.style.display = 'block';
+            video.style.display = 'none';
+        }
     });
 });
