@@ -21,8 +21,7 @@ dots.forEach(dot => {
             video.style.display = 'none';
         }
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 70e9745136ec29a542a5fb3e7f67c730634a4723
+
+
+
