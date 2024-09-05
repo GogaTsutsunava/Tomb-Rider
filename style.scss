@@ -2,6 +2,10 @@ $backgroundColor: #250902;
 $primary: #38040e;
 $accent: #640d14;
 
+<<<<<<< HEAD
+=======
+/* Reset and global styles */
+>>>>>>> 70e9745136ec29a542a5fb3e7f67c730634a4723
 *,
 *::before,
 *::after {
@@ -12,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+<<<<<<< HEAD
     width: 100%;
     height: 100vh;
     position: relative;
@@ -19,12 +24,24 @@ body {
     background-color: $backgroundColor;
 }
 
+=======
+    background-image: url(./Images/shadow-of-tomb-raider-9p8pupugcbvu8ld1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Anchor tag styles */
+>>>>>>> 70e9745136ec29a542a5fb3e7f67c730634a4723
 a {
     color: inherit;
     text-decoration: none;
     color: white;
 }
 
+<<<<<<< HEAD
 header {
     position: absolute;
     top: 0;
@@ -42,10 +59,19 @@ nav {
 nav .logo {
     font-size: 24px;
     font-weight: bold;
+=======
+/* Header and Navigation styles */
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+>>>>>>> 70e9745136ec29a542a5fb3e7f67c730634a4723
 }
 
 nav ul {
     display: flex;
+<<<<<<< HEAD
     list-style: none;
     margin: 0;
     padding: 0;
@@ -91,4 +117,77 @@ nav ul {
     background-color: white;
     cursor: pointer;
     border-radius: 50%;
+=======
+    justify-content: flex-end;
+    gap: 5%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        cursor: pointer;
+    }
+}
+
+.menu-item {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.menu-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('brush-stroke.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Centered History Section with Right Alignment */
+.history {
+    display: flex; // Use flexbox for alignment
+    flex-direction: column; // Stack children vertically
+    justify-content: center; // Center content vertically
+    align-items: flex-start; // Align items to the left
+    color: white;
+    font-family: "Roboto", sans-serif;
+    width: 50%; // Set a reasonable width for the content container
+     // Maximum width to ensure it doesn’t stretch too far
+    height: 100vh; // Fill the viewport height for vertical centering
+    text-align: right; // Align text inside the container to the right
+    padding-right: 5%; // Add padding to the right
+    margin-left: auto; // Push the .history section to the right
+    box-sizing: border-box; // Ensure padding doesn’t add to the width
+
+    h1 {
+        margin-bottom: 10px;
+        font-size: 5rem;
+        /* Decrease the value to reduce space */
+    }
+
+    p {
+        margin-top: 10px;
+        /* Decrease the value to reduce space */
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .history {
+        width: 90%; // Adjust width for smaller screens
+        padding: 10px; // Adjust padding for smaller screens
+    }
+>>>>>>> 70e9745136ec29a542a5fb3e7f67c730634a4723
 }
