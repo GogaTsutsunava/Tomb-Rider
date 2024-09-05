@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Background Carousel with Video and Images</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Logo</a>
+            <ul>
+                <li class="menu-item active" id="Home">Home</li>
+                <li class="menu-item" id="About">About</li>
+                <li class="menu-item" id="Gallery">Gallery</li>
+                <li class="menu-item" id="Evolution">Evolution</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="carousel-container">
+        <video id="background-video" muted autoplay loop>
+            <source src="./Images/Shadow Of The Tomb Raider - Official Trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img id="background-image" src="./Images/image1.jpg" alt="Background Image" style="display: none;">
+    </div>
+
+    <div class="dots">
+        <div class="dot" data-type="video" data-src="Shadow Of The Tomb Raider - Official Trailer.mp4"></div>
+        <div class="dot" data-type="image" data-src="image1.jpg"></div>
+        <div class="dot" data-type="image" data-src="image2.jpg"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
