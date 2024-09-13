@@ -59,6 +59,15 @@ nav ul li {
   font-size: 18px;
 }
 
+#text {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
 /* Mobile Responsive Nav */
 @media (max-width: 768px) {
   nav {
@@ -76,10 +85,43 @@ nav ul li {
     margin-left: 0;
   }
 }
-#carousel-container {
+.line {
+  border-left: 3px solid white;
+  height: 100px;
+}
+
+#carousel-container p {
+  max-width: 30%;
+  font-family: "Roboto", system-ui;
+  font-size: large;
+}
+
+.dot:active {
+  background-color: lightblue;
+}
+
+.dot::after {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgb(105, 3, 3);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-55%, -54%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.dot.active::after {
+  width: 10px;
+  height: 10px;
+}
+
+#carousel-container {
+  display: flex;
+  gap: 2%;
+  align-items: center;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -88,11 +130,30 @@ nav ul li {
 #background-video,
 #background-image {
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.dots {
+  top: 40%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 2;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 /* Add animation for fading effect */
@@ -128,24 +189,6 @@ nav ul li {
     height: auto;
   }
 }
-.dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-  z-index: 2;
-}
-
-.dot {
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
 /* Adjust dot size for mobile screens */
 @media (max-width: 768px) {
   .dot {
