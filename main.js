@@ -72,3 +72,10 @@ const buttons = [document.getElementById('dots1'), document.getElementById('dots
 buttons.forEach((button, index) => {
     button.addEventListener('click', () => changeText(index));
 });
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+}
